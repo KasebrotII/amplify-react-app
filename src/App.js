@@ -32,7 +32,7 @@ const App = () => {
   useEffect(() => {
     fetchCoins()
   }, [])
-  
+
 
   return (
     <div className="App">
@@ -45,7 +45,7 @@ const App = () => {
            placeholder="limit"
        />
        <button onClick={fetchCoins}>Fetch Coins</button>
-       {loading && <h2>Loading...</h2>}
+       {loading && <h2>Almost ready...</h2>}
        {
          !loading && coins.map((coin, index) => (
           <div key={index}>
