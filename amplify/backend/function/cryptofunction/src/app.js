@@ -51,6 +51,28 @@ app.get('/coins', function(req, res) {
 })
 
 
+//born
+
+app.get('/born', function(req, res) {
+
+  //let bornUrl = 'https://api.github.com/users/kasebrotii'
+
+    const bornOn = [{create_at: "Dec"}]
+
+    res.json({
+      bornOn
+    })
+
+  
+
+  // axios.get(bornUrl)
+  //   .then(response => {
+  //     res.json({  created_at: response.data.data })
+  //   })
+  //   .catch(err => res.json({ error: err }))
+})
+
+
 /**********************
  * Example get method *
  **********************/

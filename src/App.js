@@ -1,6 +1,7 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import { API } from 'aws-amplify';
+import { Born } from './Born';
 
 
 const App = () => {
@@ -54,6 +55,7 @@ const App = () => {
           </div>
         ))
       }
+      < Born />
     </div>
   );
 }
