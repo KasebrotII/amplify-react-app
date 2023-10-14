@@ -51,25 +51,24 @@ app.get('/coins', function(req, res) {
 })
 
 
-//born
+// Call GitHub api to find created_at date
 
 app.get('/born', function(req, res) {
 
-  //let bornUrl = 'https://api.github.com/users/kasebrotii'
+  let bornUrl = 'https://api.github.com/users/kasebrotii'
 
-    const bornOn = [{create_at: "Dec"}]
+    //const bornOn = [{created_at: "Dec"}]
 
-    res.json({
-      bornOn
+    // res.json({
+    //   bornOn
+    // })
+
+  axios.get(bornUrl)
+    .then(response => {
+      const created_at = response.data.created_at;
+      res.json({  created_at })
     })
-
-  
-
-  // axios.get(bornUrl)
-  //   .then(response => {
-  //     res.json({  created_at: response.data.data })
-  //   })
-  //   .catch(err => res.json({ error: err }))
+    .catch(err => res.json({ error: err }))
 })
 
 
